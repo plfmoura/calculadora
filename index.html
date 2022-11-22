@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <form class="calculator-container">
+        <section class="operations-container">
+            <div class="numeros-container">
+                <input type="button" value="1" class="num1">
+                <input type="button" value="2" class="num2">
+                <input type="button" value="3" class="num3">
+                <input type="button" value="4" class="num4">
+                <input type="button" value="5" class="num5">
+                <input type="button" value="6" class="num6">
+                <input type="button" value="7" class="num7">
+                <input type="button" value="8" class="num8">
+                <input type="button" value="9" class="num9">
+                <input type="button" value="0" class="num0">
+            </div>
+            <div class="btns-container">
+                <input type="button" value="=" class="igual">
+                <input type="button" value="+" class="somar">
+                <input type="button" value="-" class="subtrair">
+                <input type="button" value="x" class="multi">
+                <input type="button" value="/" class="divisao">
+                <input type="button" value="Limpar" class="btn-limpar">
+            </div>
+        </section>
+
+        <div class="resultado-container">
+            <input type='text' class="resultado">
+        </div>
+    </form>
+    <script src="scripts/operacoes.js" type="module"></script>
+    <script src="scripts/numeros.js" type="module"></script>
+</body>
+</html>

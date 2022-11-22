@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #F0EBCE, #AA8B56, #4E6C50, #395144);
+    background-size: 300% 300%;
+    animation: bg-gradient 5s linear infinite;
+}
+
+@keyframes bg-gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+        
+    }
+
+    100%{
+        background-position: 0% 50%;
+
+    }
+    
+}
+
+.calculator-container {
+    background-color: rgba(21, 21, 21, 0.703);
+    width: 25%;
+    height: 55%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid rgba(33, 28, 28, 0.587);
+    border-radius: 10px;
+}
+
+.numeros-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: .5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.operations-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 50%;
+}
+
+.numeros-container input:nth-child(10) {
+    grid-area: 4/2;
+    height: 160%;
+}
+
+.numeros-container input {
+    background-color: rgb(44, 44, 44);
+    color: white;
+    border: 1px solid #fff;
+    font-size: 1.5rem
+}
+
+.numeros-container input:hover {
+    transform: scale(1.02);
+    background-color: rgb(16, 14, 14);
+    cursor: pointer;
+}
+
+.soma-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btns-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: .5rem;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 1rem;
+}
+
+.somar,
+.subtrair,
+.multi,
+.divisao,
+.igual {
+    font-size: 2rem;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.btn-limpar {
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: rgb(179, 7, 7);
+    color: white;
+    border: none;
+    border: 1px solid #fff;
+}
+
+.somar:hover ,
+.subtrair:hover ,
+.multi:hover ,
+.divisao:hover,
+.igual:hover {
+    transform: scale(1.02);
+    background-color: rgb(16, 14, 14);
+}
+
+.btn-limpar:hover {
+    transform: scale(1.02);
+    background-color: rgb(120, 4, 4);
+}
+
+.resultado-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resultado {
+    pointer-events: none;
+    font-size: 3rem;
+    text-align: right;
+    letter-spacing: .1rem;
+    width: 80%;
+    height: 5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(98, 98, 98);
+    color: #fff;
+}
